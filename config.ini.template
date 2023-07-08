@@ -1,9 +1,9 @@
 [base]
 SECRET_KEY = 
-DEBUG = False 
+DEBUG = True
 
 [database]
-ENGINE = django.db.backends.postgresql_psycopg2
+ENGINE = django.db.backends.mysql
 NAME = 
 USER = 
 PASSWORD = 
