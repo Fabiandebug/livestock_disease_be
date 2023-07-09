@@ -6,7 +6,7 @@ urlpatterns = [
     # API Views URLS
     path("disease/", diseaseListView.as_view(), name="diseaseListView"),
     path(
-        "disease/<str:identifier>/<str:language>/'",
+        "disease/<str:identifier>/<str:language>/",
         diseaseListView.as_view(),
         name="diseaseListViewUpdateDelete",
     ),

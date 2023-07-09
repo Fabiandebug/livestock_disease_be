@@ -9,7 +9,7 @@ class disease(models.Model):
         ("en", "English"),
         ("sw", "Kiswahili"),
     )
-    identifier = models.CharField(max_length=100, unique=True)
+    identifier = models.CharField(max_length=100, unique=False)
     language = models.CharField(max_length=2, choices=LANGUAGE_CHOICES)
     name = models.CharField(max_length=100)
     local_names = models.TextField()
@@ -31,7 +31,9 @@ class disease(models.Model):
 
 # Images Model
 class image(models.Model):
-    identifier = models.ForeignKey(disease, on_delete=models.CASCADE)
+    disease = models.ForeignKey(
+        disease, related_name="images", on_delete=models.CASCADE
+    )
     image = models.ImageField(upload_to="media/", null=True, blank=True)
     description = models.TextField()
 

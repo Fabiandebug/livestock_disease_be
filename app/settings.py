@@ -33,7 +33,7 @@ SECRET_KEY = config.get("base", "SECRET_KEY")
 DEBUG = json.loads(str(config.get("base", "DEBUG")).lower())
 
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
