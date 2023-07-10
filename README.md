@@ -5,17 +5,20 @@ Interview Test Task for livestock set of manuals in English and Kiswahili that c
 # App Setup
 
 create your venv
+
 # python -m venv venv
 
 activate the windows venv using
+
 # .\venv\Scripts\activate.
 
 activate the linux venv using
+
 # source venv/bin/activate
 
 run
 
-# pip instal -r requirements.txt
+# pip install -r requirements.txt
 
 create the config.ini file in the root DIR and copy the configuration setting from the config.ini.template file.
 Populate the fields with your mysql database settings
@@ -35,10 +38,3 @@ run
 # python manage.py runserver
 
 This wil startup Django app server which will run on 'http://localhost:8000/'
-
-# APP URLS
-
-disease/
-disease/<str:identifier>/<str:language>/
-image/
-image/<int:pk>/
