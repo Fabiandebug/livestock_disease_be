@@ -9,6 +9,12 @@ from rest_framework import status
 
 
 # Diseases APIViews
+class diseaseIdentifiers(APIView):
+    def get(self, request):
+        identifiers = disease.objects.values_list("identifier", flat=True).distinct()
+        return Response(identifiers, status=status.HTTP_200_OK)
+
+
 class diseaseListView(APIView):
     def post(self, request):
         serializer = diseaseSerializer(data=request.data)
