@@ -4,6 +4,15 @@ Interview Test Task for livestock set of manuals in English and Kiswahili that c
 
 # App Setup
 
+create your venv
+# python -m venv venv
+
+activate the windows venv using
+# .\venv\Scripts\activate.
+
+activate the linux venv using
+# source venv/bin/activate
+
 run
 
 # pip instal -r requirements.txt
