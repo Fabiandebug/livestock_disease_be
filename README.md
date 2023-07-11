@@ -10,7 +10,7 @@ create your venv
 
 activate the windows venv using
 
-# .\venv\Scripts\activate.
+# . .\venv\Scripts\activate.ps1
 
 activate the linux venv using
 
