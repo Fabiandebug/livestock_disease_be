@@ -5,8 +5,9 @@ from .views import diseaseListView, imageListView, diseaseIdentifiers
 urlpatterns = [
     # API Views URLS
     path("disease/", diseaseListView.as_view(), name="diseaseListView"),
+    # <str:identifier>/<str:language>
     path(
-        "disease/<str:identifier>/<str:language>/",
+        "disease/<str:identifier>/<str:language>",
         diseaseListView.as_view(),
         name="diseaseListViewUpdateDelete",
     ),

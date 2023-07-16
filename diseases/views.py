@@ -26,8 +26,15 @@ class diseaseListView(APIView):
 
     def get(self, request, identifier, language):
         try:
-            disease_obj = disease.objects.get(identifier=identifier, language=language)
-            serializer = diseaseSerializer(disease_obj)
+            all_disease_objects = disease.objects.all()
+            print("All Disease Objects:")
+            for obj in all_disease_objects:
+                print(obj.identifier, obj.language)
+
+            filtered_disease_objects = all_disease_objects.filter(
+                identifier=identifier, language=language
+            )
+            serializer = diseaseSerializer(filtered_disease_objects, many=True)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except disease.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
